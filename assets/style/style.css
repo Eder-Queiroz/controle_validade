@@ -12,6 +12,7 @@ html, body{
 :root{
     --primary-color: #d21216;
     --blue-color: #223b78;
+    --gray-color: #f2efea;
 }
 
 /* Menu de navegação */
@@ -28,3 +29,32 @@ nav ul li{
 .nav-link{
     font-size: 1.2rem;
 }
+
+/* ######### */
+
+/* Section Main */
+
+main{
+    height: calc(100% - 109px);
+}
+
+main section{
+    background-color: var(--gray-color);
+    padding: 60px;
+    border-radius: 16px;
+}
+
+form label{
+    margin-bottom: 8px;
+}
+
+.btn{
+    background-color: var(--blue-color);
+    color: white;
+}
+
+.btn:hover{
+    color: rgb(175, 175, 175);
+}
+
+/* ######### */
