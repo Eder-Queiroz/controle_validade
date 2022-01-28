@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html, body{
+    height: 100%;
+}
+
+:root{
+    --primary-color: #d21216;
+    --blue-color: #223b78;
+}
+
+/* Menu de navegação */
+
+nav img{
+    width: 280px;
+    height: 80px;
+}
+
+nav ul li{
+    margin-right: 12px;
+}
+
+.nav-link{
+    font-size: 1.2rem;
+}
