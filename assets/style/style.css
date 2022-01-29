@@ -15,6 +15,26 @@ html, body{
     --gray-color: #f2efea;
 }
 
+.btn-style{
+    background-color: var(--blue-color);
+    color: white;
+    margin-top: 20px;   
+}
+
+.btn-style:hover{
+    color: rgb(175, 175, 175);
+}
+
+.btn-second{
+    background-color: var(--primary-color);
+    color: white;
+    margin-top: 20px; 
+}
+
+.btn-second:hover{
+    color: rgb(175, 175, 175);
+}
+
 /* Menu de navegação */
 
 nav img{
@@ -40,7 +60,7 @@ main{
 
 main section{
     background-color: var(--gray-color);
-    padding: 60px;
+    padding: 40px;
     border-radius: 16px;
 }
 
@@ -48,13 +68,16 @@ form label{
     margin-bottom: 8px;
 }
 
-.btn{
-    background-color: var(--blue-color);
-    color: white;
+/* ######### */
+
+/* Modal */
+
+.modal-content{
+    padding: 10px 40px 40px 40px;
 }
 
-.btn:hover{
-    color: rgb(175, 175, 175);
+.modal-body > form > .btn-style{
+    margin-top: 40px;
 }
 
 /* ######### */
