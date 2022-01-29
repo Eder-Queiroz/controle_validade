@@ -12,6 +12,27 @@ html, body{
 :root{
     --primary-color: #d21216;
     --blue-color: #223b78;
+    --gray-color: #f2efea;
+}
+
+.btn-style{
+    background-color: var(--blue-color);
+    color: white;
+    margin-top: 20px;   
+}
+
+.btn-style:hover{
+    color: rgb(175, 175, 175);
+}
+
+.btn-second{
+    background-color: var(--primary-color);
+    color: white;
+    margin-top: 20px; 
+}
+
+.btn-second:hover{
+    color: rgb(175, 175, 175);
 }
 
 /* Menu de navegação */
@@ -28,3 +49,35 @@ nav ul li{
 .nav-link{
     font-size: 1.2rem;
 }
+
+/* ######### */
+
+/* Section Main */
+
+main{
+    height: calc(100% - 109px);
+}
+
+main section{
+    background-color: var(--gray-color);
+    padding: 40px;
+    border-radius: 16px;
+}
+
+form label{
+    margin-bottom: 8px;
+}
+
+/* ######### */
+
+/* Modal */
+
+.modal-content{
+    padding: 10px 40px 40px 40px;
+}
+
+.modal-body > form > .btn-style{
+    margin-top: 40px;
+}
+
+/* ######### */
