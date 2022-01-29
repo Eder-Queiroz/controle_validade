@@ -1,3 +1,11 @@
+<?php 
+
+ini_set('display_errors', 0);
+
+require_once 'assets/scripts/validar_form.php'
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -67,17 +75,23 @@
                 
                 <div class="form-group col-md-6">
                     <label for="codeBar">Cod. Barra</label>
-                    <input type="number" name="codeBar" id="codeBar" class="form-control">
+                    <input type="number" name="codeBar" id="codeBar" class="form-control 
+                    <?= $erros['codeBar'] ? 'is-invalid' : '' ?>" placeholder="Ex: 7894904326044">
+                    <div class="invalid-feedback"><?= $erros['codeBar'] ?></div>
                 </div>
 
                 <div class="form-group col-md-6">
                     <label for="unidade">Unidades</label>
-                    <input type="number" name="unidade" id="unidade" class="form-control">
+                    <input type="number" name="unidade" id="unidade" class="form-control 
+                    <?= $erros['unidade'] ? 'is-invalid' : '' ?>" placeholder="Ex: 10">
+                    <div class="invalid-feedback"><?= $erros['unidade'] ?></div>
                 </div>
 
                 <div class="form-group col-md-6 mt-3">
                     <label for="data">Data de Vencimento</label>
-                    <input type="date" name="data" id="data" class="form-control">
+                    <input type="date" name="data" id="data" class="form-control 
+                    <?= $erros['data'] ? 'is-invalid' : '' ?>">
+                    <div class="invalid-feedback"><?= $erros['data'] ?></div>
                 </div>
                 
             </div>
@@ -112,12 +126,16 @@
 
                             <div class="form-group col-md-6">
                                 <label for="codeBar">Cod. Barra</label>
-                                <input type="number" name="codeBar" id="codeBar" class="form-control">
+                                <input type="number" name="codeBar" id="codeBar" class="form-control 
+                                <?= $erros['codeBar'] ? 'is-invalid' : '' ?>" placeholder="Ex: 7894904326044">
+                                <div class="invalid-feedback"><?= $erros['codeBar'] ?></div>
                             </div>
 
                             <div class="form-group col-md-6">
                                 <label for="nome">Nome</label>
-                                <input type="text" name="nome" id="nome" class="form-control">
+                                <input type="text" name="nome" id="nome" class="form-control 
+                                <?= $erros['nome'] ? 'is-invalid' : '' ?>" placeholder="Ex: Pizza Calabresa">
+                                <div class="invalid-feedback"><?= $erros['nome'] ?></div>
                             </div>
 
                         </div>
@@ -126,12 +144,16 @@
 
                             <div class="form-group col-md-6">
                                 <label for="marca">Marca</label>
-                                <input type="text" name="marca" id="marca" class="form-control">
+                                <input type="text" name="marca" id="marca" class="form-control 
+                                <?= $erros['marca'] ? 'is-invalid' : '' ?>" placeholder="Ex: Seara">
+                                <div class="invalid-feedback"><?= $erros['marca'] ?></div>
                             </div>
 
                             <div class="form-group col-md-6">
                                 <label for="peso">Peso</label>
-                                <input type="text" name="peso" id="peso" class="form-control">
+                                <input type="text" name="peso" id="peso" class="form-control 
+                                <?= $erros['peso'] ? 'is-invalid' : '' ?>" placeholder="Ex: 460g">
+                                <div class="invalid-feedback"><?= $erros['peso'] ?></div>
                             </div>
                         </div>
 
