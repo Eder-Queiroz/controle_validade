@@ -140,7 +140,7 @@ require_once 'assets/scripts/validar_form.php'
 
                         </div>
 
-                        <div class="row">
+                        <div class="row mb-4">
 
                             <div class="form-group col-md-6">
                                 <label for="marca">Marca</label>
@@ -152,9 +152,22 @@ require_once 'assets/scripts/validar_form.php'
                             <div class="form-group col-md-6">
                                 <label for="peso">Peso</label>
                                 <input type="text" name="peso" id="peso" class="form-control 
-                                <?= $erros['peso'] ? 'is-invalid' : '' ?>" placeholder="Ex: 460g">
+                                <?= $erros['peso'] ? 'is-invalid' : '' ?>" placeholder="Ex: 0,400kg">
                                 <div class="invalid-feedback"><?= $erros['peso'] ?></div>
                             </div>
+
+                        </div>
+
+                        <div class="row">
+
+                            <div class="form-group col-md-6">
+                                <label for="setor">Setor</label>
+                                <select name="setor" id="setor" class="form-select">
+                                    <option value="padaria">Padaria</option>
+                                    <option value="mercearia">Mercearia</option>
+                                </select>
+                            </div>
+
                         </div>
 
                         <button class="btn btn-style">Enviar</button>
