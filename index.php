@@ -1,3 +1,11 @@
+<?php 
+
+ini_set('display_errors', 0 );
+
+require_once 'assets/scripts/db_form.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -67,17 +75,26 @@
                 
                 <div class="form-group col-md-6">
                     <label for="codeBar">Cod. Barra</label>
-                    <input type="number" name="codeBar" id="codeBar" class="form-control">
+                    <input type="number" name="barCode" id="codeBar" class="form-control 
+                    <?= $erros['barCode'] ? 'is-invalid' : '' ?>" placeholder="Ex: 7894904326044"
+                    value="<?= $dados['barCode'] ?>">
+                    <div class="invalid-feedback"><?= $erros['barCode'] ?></div>
                 </div>
 
                 <div class="form-group col-md-6">
                     <label for="unidade">Unidades</label>
-                    <input type="number" name="unidade" id="unidade" class="form-control">
+                    <input type="number" name="unidade" id="unidade" class="form-control 
+                    <?= $erros['unidade'] ? 'is-invalid' : '' ?>" placeholder="Ex: 10"
+                    value="<?= $dados['unidade'] ?>">
+                    <div class="invalid-feedback"><?= $erros['unidade'] ?></div>
                 </div>
 
                 <div class="form-group col-md-6 mt-3">
                     <label for="data">Data de Vencimento</label>
-                    <input type="date" name="data" id="data" class="form-control">
+                    <input type="date" name="data" id="data" class="form-control 
+                    <?= $erros['data'] ? 'is-invalid' : '' ?>" placeholder="Ex: dd/mm/aaaa"
+                    value="<?= $dados['data'] ?>">
+                    <div class="invalid-feedback"><?= $erros['data'] ?></div>
                 </div>
                 
             </div>
@@ -112,12 +129,34 @@
 
                             <div class="form-group col-md-6">
                                 <label for="codeBar">Cod. Barra</label>
-                                <input type="number" name="codeBar" id="codeBar" class="form-control">
+                                <input type="number" name="codeBar" id="codeBar" class="form-control 
+                                <?= $erros['codeBar'] ? 'is-invalid' : '' ?>" placeholder="Ex: 7894904326044" value="<?= $dados['codeBar'] ?>">
+                                <div class="invalid-feedback"><?= $erros['codeBar'] ?></div>
                             </div>
 
                             <div class="form-group col-md-6">
                                 <label for="nome">Nome</label>
-                                <input type="text" name="nome" id="nome" class="form-control">
+                                <input type="text" name="nome" id="nome" class="form-control 
+                                <?= $erros['nome'] ? 'is-invalid' : '' ?>" placeholder="Ex: Pizza Calabresa" value="<?= $dados['nome'] ?>">
+                                <div class="invalid-feedback"><?= $erros['nome'] ?></div>
+                            </div>
+
+                        </div>
+
+                        <div class="row mb-4">
+
+                            <div class="form-group col-md-6">
+                                <label for="marca">Marca</label>
+                                <input type="text" name="marca" id="marca" class="form-control 
+                                <?= $erros['marca'] ? 'is-invalid' : '' ?>" placeholder="Ex: Seara" value="<?= $dados['marca'] ?>">
+                                <div class="invalid-feedback"><?= $erros['marca'] ?></div>
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                <label for="peso">Peso</label>
+                                <input type="text" name="peso" id="peso" class="form-control 
+                                <?= $erros['peso'] ? 'is-invalid' : '' ?>" placeholder="Ex: 0,400kg" value="<?= $dados['peso'] ?>">
+                                <div class="invalid-feedback"><?= $erros['peso'] ?></div>
                             </div>
 
                         </div>
@@ -125,14 +164,13 @@
                         <div class="row">
 
                             <div class="form-group col-md-6">
-                                <label for="marca">Marca</label>
-                                <input type="text" name="marca" id="marca" class="form-control">
+                                <label for="setor">Setor</label>
+                                <select name="setor" id="setor" class="form-select" value="<?= $dados['setor'] ?>">
+                                    <option value="padaria">Padaria</option>
+                                    <option value="mercearia">Mercearia</option>
+                                </select>
                             </div>
 
-                            <div class="form-group col-md-6">
-                                <label for="peso">Peso</label>
-                                <input type="text" name="peso" id="peso" class="form-control">
-                            </div>
                         </div>
 
                         <button class="btn btn-style">Enviar</button>
@@ -145,8 +183,6 @@
         </div>
 
     </div>
-
-
 
 </main>
 
