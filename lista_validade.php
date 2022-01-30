@@ -1,5 +1,7 @@
 <?php
 
+    ini_set('display_errors', 0);
+
     include_once 'assets/scripts/consultar_db.php';
 
 ?>
@@ -28,6 +30,7 @@
                     <th>Setor</th>
                     <th>Unidade</th>
                     <th>Data Venc.</th>
+                    <th>Excluir</th>
                 </thead>
                 <tbody>
                     <?php foreach($registros as $registro): ?>
@@ -35,10 +38,15 @@
                             <td><?= $registro['codeBar'] ?></td>
                             <td><?= $registro['marca'] ?></td>
                             <td><?= $registro['nome'] ?></td>
-                            <td><?= $registro['peso'] . 'Kg' ?></td>
+                            <td><?= number_format($registro['peso'], 3, ',', '.') . 'Kg' ?></td>
                             <td><?= $registro['setor'] ?></td>
                             <td><?= $registro['unidade'] ?></td>
                             <td><?= date('d/m/Y', strtotime($registro['dataVenc'])) ?></td>
+                            <td>
+                                <a href="?excluir=<?= $registro['codeBar'] ?>" class="btn btn-danger">
+                                    <img src="assets/images/exclude.svg" alt="excluir"></i>
+                                </a>
+                            </td>
                         </tr>
                     <?php endforeach ?>
                 </tbody>

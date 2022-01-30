@@ -4,7 +4,7 @@ include_once 'validar_form_adicionar.php';
 
 if(is_countable($erros) && !count($erros)) {
 
-    $sql = "INSERT INTO adicionar 
+    $sql = "INSERT INTO adicionar
     (codeBar, marca, nome, peso, unidade, dataVenc, setor)
     VALUE (?, ?, ?, ?, ?, ?, ?)";
 
