@@ -1,5 +1,4 @@
-<?php namespace assets\scripts\validar_form;
-
+<?php
 
 if(count($_POST) > 0) {
     
@@ -26,12 +25,17 @@ if(count($_POST) > 0) {
 
     $unidadeConfig = ['options' => ['min_range' => 0]];
 
-    if(!filter_var($dados['unidade'], FILTER_VALIDATE_INT, $unidadeConfig)) {
+    if(filter_var($dados['unidade'], FILTER_VALIDATE_INT, $unidadeConfig)) {
         $erros['unidade'] = 'Unidades inválida!';
     }
 
-    if($dados['data'] == null) {
-        $erros['data'] = 'A data é obrigatório!';
+    if(isset($dados['data'])) {
+        
+        $data = DateTime::createFromFormat('Y-m-d', $dados['data']);
+        
+        if(!$data) {
+            $erros['data'] = 'A data é obrigatório!';
+        }
     }
 
 }

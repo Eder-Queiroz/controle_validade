@@ -1,8 +1,8 @@
 <?php 
 
-ini_set('display_errors', 0);
+ini_set('display_errors', 0 );
 
-require_once 'assets/scripts/validar_form.php'
+require_once 'assets/scripts/db_form_adicionar.php';
 
 ?>
 
@@ -75,7 +75,7 @@ require_once 'assets/scripts/validar_form.php'
                 
                 <div class="form-group col-md-6">
                     <label for="codeBar">Cod. Barra</label>
-                    <input type="number" name="codeBar" id="codeBar" class="form-control 
+                    <input type="number" name="barCode" id="codeBar" class="form-control 
                     <?= $erros['codeBar'] ? 'is-invalid' : '' ?>" placeholder="Ex: 7894904326044">
                     <div class="invalid-feedback"><?= $erros['codeBar'] ?></div>
                 </div>
@@ -127,14 +127,14 @@ require_once 'assets/scripts/validar_form.php'
                             <div class="form-group col-md-6">
                                 <label for="codeBar">Cod. Barra</label>
                                 <input type="number" name="codeBar" id="codeBar" class="form-control 
-                                <?= $erros['codeBar'] ? 'is-invalid' : '' ?>" placeholder="Ex: 7894904326044">
+                                <?= $erros['codeBar'] ? 'is-invalid' : '' ?>" placeholder="Ex: 7894904326044" value="<?= $dados['codeBar'] ?>">
                                 <div class="invalid-feedback"><?= $erros['codeBar'] ?></div>
                             </div>
 
                             <div class="form-group col-md-6">
                                 <label for="nome">Nome</label>
                                 <input type="text" name="nome" id="nome" class="form-control 
-                                <?= $erros['nome'] ? 'is-invalid' : '' ?>" placeholder="Ex: Pizza Calabresa">
+                                <?= $erros['nome'] ? 'is-invalid' : '' ?>" placeholder="Ex: Pizza Calabresa" value="<?= $dados['nome'] ?>">
                                 <div class="invalid-feedback"><?= $erros['nome'] ?></div>
                             </div>
 
@@ -145,14 +145,14 @@ require_once 'assets/scripts/validar_form.php'
                             <div class="form-group col-md-6">
                                 <label for="marca">Marca</label>
                                 <input type="text" name="marca" id="marca" class="form-control 
-                                <?= $erros['marca'] ? 'is-invalid' : '' ?>" placeholder="Ex: Seara">
+                                <?= $erros['marca'] ? 'is-invalid' : '' ?>" placeholder="Ex: Seara" value="<?= $dados['marca'] ?>">
                                 <div class="invalid-feedback"><?= $erros['marca'] ?></div>
                             </div>
 
                             <div class="form-group col-md-6">
                                 <label for="peso">Peso</label>
                                 <input type="text" name="peso" id="peso" class="form-control 
-                                <?= $erros['peso'] ? 'is-invalid' : '' ?>" placeholder="Ex: 0,400kg">
+                                <?= $erros['peso'] ? 'is-invalid' : '' ?>" placeholder="Ex: 0,400kg" value="<?= $dados['peso'] ?>">
                                 <div class="invalid-feedback"><?= $erros['peso'] ?></div>
                             </div>
 
@@ -162,7 +162,7 @@ require_once 'assets/scripts/validar_form.php'
 
                             <div class="form-group col-md-6">
                                 <label for="setor">Setor</label>
-                                <select name="setor" id="setor" class="form-select">
+                                <select name="setor" id="setor" class="form-select" value="<?= $dados['setor'] ?>">
                                     <option value="padaria">Padaria</option>
                                     <option value="mercearia">Mercearia</option>
                                 </select>
@@ -180,8 +180,6 @@ require_once 'assets/scripts/validar_form.php'
         </div>
 
     </div>
-
-
 
 </main>
 
