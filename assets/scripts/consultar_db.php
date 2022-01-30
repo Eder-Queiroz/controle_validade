@@ -7,11 +7,11 @@ $sql = 'SELECT codeBar, marca, nome, peso, setor, unidade, dataVenc FROM adicion
 $conexao = novaConexao();
 $resultado = $conexao -> query($sql);
 
-$registro = [];
+$registros = [];
 
 if($resultado -> num_rows > 0) {
     while($row = $resultado -> fetch_assoc()) {
-        $registro[] = $row; 
+        $registros[] = $row; 
     }
 }elseif($conexao -> error) {
     echo 'Erro: ' . $conexao -> error;

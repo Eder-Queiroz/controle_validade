@@ -35,6 +35,8 @@ html, body{
     color: rgb(175, 175, 175);
 }
 
+/* ==INDEX== */
+
 /* Menu de navegação */
 
 nav img{
@@ -81,3 +83,19 @@ form label{
 }
 
 /* ######### */
+
+/* ================== */
+
+/* ==LISTA VALIDADE== */
+
+/* Main */
+
+.lista_validade_main section{
+    padding: 0;
+    border-radius: 0;
+    background-color: transparent;
+}
+
+/* ######### */
+
+/* ================== */
