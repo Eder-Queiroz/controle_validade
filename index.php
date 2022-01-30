@@ -2,7 +2,7 @@
 
 ini_set('display_errors', 0 );
 
-require_once 'assets/scripts/db_form_adicionar.php';
+require_once 'assets/scripts/db_form.php';
 
 ?>
 
@@ -76,21 +76,24 @@ require_once 'assets/scripts/db_form_adicionar.php';
                 <div class="form-group col-md-6">
                     <label for="codeBar">Cod. Barra</label>
                     <input type="number" name="barCode" id="codeBar" class="form-control 
-                    <?= $erros['codeBar'] ? 'is-invalid' : '' ?>" placeholder="Ex: 7894904326044">
-                    <div class="invalid-feedback"><?= $erros['codeBar'] ?></div>
+                    <?= $erros['barCode'] ? 'is-invalid' : '' ?>" placeholder="Ex: 7894904326044"
+                    value="<?= $dados['barCode'] ?>">
+                    <div class="invalid-feedback"><?= $erros['barCode'] ?></div>
                 </div>
 
                 <div class="form-group col-md-6">
                     <label for="unidade">Unidades</label>
                     <input type="number" name="unidade" id="unidade" class="form-control 
-                    <?= $erros['unidade'] ? 'is-invalid' : '' ?>" placeholder="Ex: 10">
+                    <?= $erros['unidade'] ? 'is-invalid' : '' ?>" placeholder="Ex: 10"
+                    value="<?= $dados['unidade'] ?>">
                     <div class="invalid-feedback"><?= $erros['unidade'] ?></div>
                 </div>
 
                 <div class="form-group col-md-6 mt-3">
                     <label for="data">Data de Vencimento</label>
                     <input type="date" name="data" id="data" class="form-control 
-                    <?= $erros['data'] ? 'is-invalid' : '' ?>">
+                    <?= $erros['data'] ? 'is-invalid' : '' ?>" placeholder="Ex: dd/mm/aaaa"
+                    value="<?= $dados['data'] ?>">
                     <div class="invalid-feedback"><?= $erros['data'] ?></div>
                 </div>
                 
