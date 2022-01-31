@@ -35,6 +35,26 @@ html, body{
     color: rgb(175, 175, 175);
 }
 
+.bg_color_primary{
+    background-color: var(--primary-color);
+}
+
+.bg_color_blue{
+    background-color: var(--blue-color);
+}
+
+.btn-outline-blue{
+    border: 1px solid var(--blue-color);
+}
+
+.btn-outline-blue:hover{
+    background-color: var(--blue-color);
+}
+
+.btn-outline-blue:hover > svg{
+    fill: white;
+}
+
 /* ==INDEX== */
 
 /* Menu de navegação */
