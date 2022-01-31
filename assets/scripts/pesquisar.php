@@ -1,37 +1,43 @@
 <?php
 
-    ini_set('display_errors', 0);
+require_once 'conexao.php';
 
-    include_once 'assets/scripts/consultar_db.php';
+$conexao = novaConexao();
+
+if(isset($_POST['submit_pesquisar'])) {
+
+    $pesquisar = $conexao -> real_escape_string($_POST['pesquisar']);
+
+    $sql = "SELECT * FROM adicionar
+    WHERE codeBar LIKE '%$pesquisar%' OR nome LIKE '%$pesquisar%' OR marca LIKE '%$pesquisar%' OR setor LIKE '%$pesquisar%'";
+
+    $resultado = $conexao -> query($sql);
+
+    $registros = [];
+
+    if($resultado -> num_rows > 0) {
+        while($row = $resultado -> fetch_assoc()) {
+            $registros[] = $row; 
+        }
+    }else {
+        $erro = 'Nenhum resultado foi encontrado!';
+    }
+
+}
 
 ?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    
-    <?php include_once 'head.php' ?>
-
+    <?php include_once '../../head.php' ?>
 </head>
 <body>
-    
-    <?php include_once 'navBar.php' ?>
+    <?php include_once '../../navBar.php' ?>
     
     <main class="d-flex flex-column justify-content-center align-items-center lista_validade_main">
-        
-        <form action="assets/scripts/pesquisar.php" method="post">
-    
-            <div class="input-group mb-3">
-                <input type="text" class="form-control" name="pesquisar" placeholder="Pesquisar" aria-label="Pesquisar" aria-describedby="submit_pesquisar">
 
-                <button class="btn btn-outline-secondary" id="submit_pesquisar" name="submit_pesquisar">
-                    <img src="assets/images/search.svg" alt="Pesquisar">
-                </button>
-            </div>
-    
-        </form>
-
-        <section class="container-md col-10">
+    <section class="container-md col-10">
 
             <table class="table table-striped table-bordered">
 
@@ -67,6 +73,7 @@
             </table>
 
         </section>
+
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
