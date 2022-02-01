@@ -78,6 +78,7 @@ nav ul li{
 
 main{
     height: calc(100% - 109px);
+    min-height: 720px;
 }
 
 main section{
