@@ -55,6 +55,10 @@ html, body{
     fill: white;
 }
 
+main{
+    margin-top: 40px;
+}
+
 /* ==INDEX== */
 
 /* Menu de navegação */
@@ -76,9 +80,9 @@ nav ul li{
 
 /* Section Main */
 
-main{
+main.main_height{
     height: calc(100% - 109px);
-    min-height: 720px;
+    margin: 0;
 }
 
 main section{

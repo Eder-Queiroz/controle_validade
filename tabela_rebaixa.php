@@ -13,7 +13,7 @@ ini_set('display_errors', 1);
     
 <?php require_once 'navBar.php' ?>
 
-<main class="d-flex flex-row justify-content-center align-items-center">
+<main class="d-flex flex-row justify-content-center align-items-center main_height">
 
         <div class="container-md col-md-6 form-tabela-rebaixa">
             <h2>Selecionar setor:</h2>
