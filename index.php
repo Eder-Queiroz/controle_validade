@@ -17,7 +17,7 @@ require_once 'assets/scripts/db_form.php';
     
 <?php include_once 'navBar.php'; ?>
 
-<main class="d-flex flex-column justify-content-center align-items-center">
+<main class="d-flex flex-column justify-content-center align-items-center main_height">
 
     <section class="container-md col-md-6">
         

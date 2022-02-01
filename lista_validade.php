@@ -46,40 +46,44 @@
 
         <section class="container-md col-10">
 
-            <table class="table table-striped table-bordered">
-
-                <thead>
-                    <th>Cod. Barra</th>
-                    <th>Marca</th>
-                    <th>Nome</th>
-                    <th>Peso</th>
-                    <th>Setor</th>
-                    <th>Unidade</th>
-                    <th>Data Venc.</th>
-                    <th>Excluir</th>
-                </thead>
-                <tbody>
-                    <?php foreach($registros as $registro): ?>
-                        <tr>
-                            <td><?= $registro['codeBar'] ?></td>
-                            <td><?= $registro['marca'] ?></td>
-                            <td><?= $registro['nome'] ?></td>
-                            <td><?= number_format($registro['peso'], 3, ',', '.') . 'Kg' ?></td>
-                            <td><?= $registro['setor'] ?></td>
-                            <td><?= $registro['unidade'] ?></td>
-                            <td><?= date('d/m/Y', strtotime($registro['dataVenc'])) ?></td>
-                            <td>
-                                <a href="?excluir=<?= $registro['codeBar'] ?>" class="btn bg_color_primary">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-exclude" viewBox="0 0 16 16">
-                                        <path d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2V2zm12 2H5a1 1 0 0 0-1 1v7h7a1 1 0 0 0 1-1V4z"/>
-                                    </svg>
-                                </a>
-                            </td>
-                        </tr>
-                    <?php endforeach ?>
-                </tbody>
-
-            </table>
+            <div class="table-responsive-md">
+                
+                <table class="table table-striped table-bordered">
+    
+                    <thead>
+                        <th scope="col">Cod. Barra</th>
+                        <th scope="col">Marca</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Peso</th>
+                        <th scope="col">Setor</th>
+                        <th scope="col">Unidade</th>
+                        <th scope="col">Data Venc.</th>
+                        <th scope="col">Excluir</th>
+                    </thead>
+                    <tbody>
+                        <?php foreach($registros as $registro): ?>
+                            <tr>
+                                <td><?= $registro['codeBar'] ?></td>
+                                <td><?= $registro['marca'] ?></td>
+                                <td><?= $registro['nome'] ?></td>
+                                <td><?= number_format($registro['peso'], 3, ',', '.') . 'Kg' ?></td>
+                                <td><?= $registro['setor'] ?></td>
+                                <td><?= $registro['unidade'] ?></td>
+                                <td><?= date('d/m/Y', strtotime($registro['dataVenc'])) ?></td>
+                                <td>
+                                    <a href="?excluir=<?= $registro['codeBar'] ?>" class="btn bg_color_primary">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-exclude" viewBox="0 0 16 16">
+                                            <path d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2V2zm12 2H5a1 1 0 0 0-1 1v7h7a1 1 0 0 0 1-1V4z"/>
+                                        </svg>
+                                    </a>
+                                </td>
+                            </tr>
+                        <?php endforeach ?>
+                    </tbody>
+    
+                </table>
+                
+            </div>
 
         </section>
     </main>

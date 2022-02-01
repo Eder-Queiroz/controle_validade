@@ -23,7 +23,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Tabela</a>
+                    <a href="tabela_rebaixa.php" class="nav-link">Tabela</a>
                 </li>
 
             </ul>
