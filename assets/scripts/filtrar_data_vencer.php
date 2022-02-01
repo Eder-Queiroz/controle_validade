@@ -12,14 +12,14 @@ if(isset($_POST['submit_filtrar'])){
     $data_acrescentada_formatada = $data_acrescentada -> format('Y-m-d');
 
     $sql = "SELECT * FROM adicionar
-    WHERE dataVenc <= '$data_acrescentada_formatada' ORDER BY dataVenc DESC";
+    WHERE dataVenc <= '$data_acrescentada_formatada' ORDER BY dataVenc";
 
     $resultado = $conexao -> query($sql);
 
     $registros = [];
 
     if($resultado -> num_rows > 0) {
-        while($row = $resultado -> fetch_assoc()){
+        while($row = $resultado -> fetch_assoc()) {
             $registros[] = $row;
         }
     }else {

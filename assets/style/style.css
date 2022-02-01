@@ -119,3 +119,21 @@ form label{
 /* ######### */
 
 /* ================== */
+
+/* ==TABELA REBAIXA== */
+
+/* MAIN */
+
+.form-tabela-rebaixa{
+    background-color: var(--gray-color);
+    padding: 60px 80px 40px 80px;
+    border-radius: 16px;
+}
+
+.form-tabela-rebaixa > h2{
+    font-size: 1.4rem;
+}
+
+/* ######### */
+
+/* ================== */
