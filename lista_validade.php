@@ -4,11 +4,6 @@
 
     include_once 'assets/scripts/consultar_db.php';
 
-    $tz = new DateTimeZone('America/Sao_Paulo');
-    $data_atual = new DateTime(null, $tz);
-
-    $data_atual_formatada = $data_atual -> format('Y-m-d');
-
 ?>
 
 <!DOCTYPE html>
@@ -40,7 +35,6 @@
             </form>
 
             <form action="filtro_data_vencer.php" method="post" class="ms-3 mb-3">
-                <input type="hidden" name="data_vencer" value="<?= $data_atual_formatada ?>">
                 <button class="btn btn-success" name="submit_filtrar">
                     Filtrar
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-filter" viewBox="0 0 16 16">

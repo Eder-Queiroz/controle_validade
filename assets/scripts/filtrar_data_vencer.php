@@ -11,8 +11,6 @@ if(isset($_POST['submit_filtrar'])){
     $data_acrescentada -> modify('+2 day');
     $data_acrescentada_formatada = $data_acrescentada -> format('Y-m-d');
 
-    $filtrar = $conexao -> real_escape_string($_POST['data_vencer']);
-
     $sql = "SELECT * FROM adicionar
     WHERE dataVenc < '$data_acrescentada_formatada'";
 
