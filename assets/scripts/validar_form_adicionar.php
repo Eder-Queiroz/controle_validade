@@ -22,7 +22,7 @@ if(count($_POST) > 0) {
     $pesoConfig = ['options' => ['decimal' => ',']];
 
     if(!filter_var($dados['peso'], FILTER_VALIDATE_FLOAT, $pesoConfig)) {
-        $erros['peso'] = 'O peso deve ser em gramas. Ex: 500g';
+        $erros['peso'] = 'O peso deve ser em gramas. Ex: 0,500';
         
     }
 }
