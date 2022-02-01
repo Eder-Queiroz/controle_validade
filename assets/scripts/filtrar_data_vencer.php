@@ -1,8 +1,19 @@
 <?php
 
+ini_set('display_errors', 0);
+
 require_once 'conexao.php';
 
 $conexao = novaConexao();
+
+if($_GET['excluir']) {
+
+    $excluirSQL = 'DELETE FROM adicionar WHERE codeBar = ?';
+    $stmt = $conexao -> prepare($excluirSQL);
+    $stmt -> bind_param('i', $_GET['excluir']);
+    $stmt -> execute();
+
+}
 
 if(isset($_POST['submit_filtrar'])){
 
