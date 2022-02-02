@@ -59,7 +59,9 @@ main{
     margin-top: 40px;
 }
 
-/* ==INDEX== */
+.logout{
+    background-color: #e0deda;
+}
 
 /* Menu de navegação */
 
@@ -78,10 +80,26 @@ nav ul li{
 
 /* ######### */
 
+/* FOOTER */
+
+footer{
+    width: 100%;
+    padding: 16px;
+    background-color: var(--blue-color);
+}
+
+footer > span{
+    color: white;
+}
+
+/* ######### */
+
+/* ==INDEX== */
+
 /* Section Main */
 
 main.main_height{
-    height: calc(100% - 109px);
+    height: calc(100% - 219px);
     margin: 0;
 }
 
@@ -143,6 +161,18 @@ form label{
     fill: rgb(175, 175, 175);
 }
 
+/* ######### */
+
+/* ================== */
+
+/* ==LOGIN== */
+
+/* SECTION_LOGIN */
+
+main.main_height_login{
+    height: calc(100% - 162px);
+    margin: 0;
+}
 /* ######### */
 
 /* ================== */
