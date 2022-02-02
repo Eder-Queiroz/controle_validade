@@ -55,6 +55,10 @@ html, body{
     fill: white;
 }
 
+main{
+    margin-top: 40px;
+}
+
 /* ==INDEX== */
 
 /* Menu de navegação */
@@ -76,8 +80,9 @@ nav ul li{
 
 /* Section Main */
 
-main{
+main.main_height{
     height: calc(100% - 109px);
+    margin: 0;
 }
 
 main section{
@@ -132,6 +137,10 @@ form label{
 
 .form-tabela-rebaixa > h2{
     font-size: 1.4rem;
+}
+
+.form-tabela-rebaixa > form > div > button:hover svg{
+    fill: rgb(175, 175, 175);
 }
 
 /* ######### */

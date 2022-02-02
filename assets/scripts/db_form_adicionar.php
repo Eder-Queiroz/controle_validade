@@ -23,6 +23,7 @@ if(is_countable($erros) && !count($erros)) {
     $stmt -> bind_param('issdiss', ...$params);
 
     if($stmt -> execute()) {
+        $feedback = "O produto {$dados['nome']} - {$dados['codeBar']}, foi adicionado com Sucesso!";
         unset($dados);
     }
 
