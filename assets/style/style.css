@@ -63,8 +63,6 @@ main{
     background-color: #e0deda;
 }
 
-/* ==INDEX== */
-
 /* Menu de navegação */
 
 nav img{
@@ -82,10 +80,26 @@ nav ul li{
 
 /* ######### */
 
+/* FOOTER */
+
+footer{
+    width: 100%;
+    padding: 16px;
+    background-color: var(--blue-color);
+}
+
+footer > span{
+    color: white;
+}
+
+/* ######### */
+
+/* ==INDEX== */
+
 /* Section Main */
 
 main.main_height{
-    height: calc(100% - 109px);
+    height: calc(100% - 219px);
     margin: 0;
 }
 
@@ -155,10 +169,10 @@ form label{
 
 /* SECTION_LOGIN */
 
-.bg-teste{
-    background-color: blue;
+main.main_height_login{
+    height: calc(100% - 162px);
+    margin: 0;
 }
-
 /* ######### */
 
 /* ================== */
