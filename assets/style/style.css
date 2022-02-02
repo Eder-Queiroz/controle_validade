@@ -59,6 +59,10 @@ main{
     margin-top: 40px;
 }
 
+.logout{
+    background-color: #e0deda;
+}
+
 /* ==INDEX== */
 
 /* Menu de navegação */
@@ -141,6 +145,18 @@ form label{
 
 .form-tabela-rebaixa > form > div > button:hover svg{
     fill: rgb(175, 175, 175);
+}
+
+/* ######### */
+
+/* ================== */
+
+/* ==LOGIN== */
+
+/* SECTION_LOGIN */
+
+.bg-teste{
+    background-color: blue;
 }
 
 /* ######### */

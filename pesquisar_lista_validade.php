@@ -1,4 +1,10 @@
-<?php include_once 'assets/scripts/pesquisar.php' ?>
+<?php 
+
+session_start();
+
+include_once 'assets/scripts/pesquisar.php' 
+
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
