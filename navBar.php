@@ -33,3 +33,8 @@
     </div>
 
 </nav>
+
+<div class="d-flex flex-row justify-content-between align-items-center logout">
+    <span class="mx-4 my-2">Usuario: <?= $_SESSION['usuario'] ?></span>
+    <a href="logout.php" class="btn btn-danger mx-4 my-2">Sair</a>
+</div>
