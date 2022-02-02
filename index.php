@@ -2,7 +2,17 @@
 
 ini_set('display_errors', 0 );
 
+session_start();
+
 require_once 'assets/scripts/db_form.php';
+
+if($_COOKIE['usuario']) {
+    $_SESSION['usuario'] = $_COOKIE['usuario'];
+}
+
+if(!$_SESSION['usuario']){
+    header('Location: login.php');
+}
 
 ?>
 
@@ -30,7 +40,6 @@ require_once 'assets/scripts/db_form.php';
     <section class="container-md col-md-6">
         
         <form action="#" method="post" class="d-flex flex-column justify-content-center align-items-center">
-
             <div class="row">
                 
                 <div class="form-group col-md-6">

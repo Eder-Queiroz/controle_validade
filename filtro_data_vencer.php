@@ -1,6 +1,8 @@
 <?php 
 
-ini_set('display_errors', 1);
+ini_set('display_errors', 0);
+
+session_start();
 
 include_once 'assets/scripts/filtrar_data_vencer.php';
 
