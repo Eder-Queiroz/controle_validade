@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html, body{
+    height: 100%;
+}
+
+:root{
+    --primary-color: #d21216;
+    --blue-color: #223b78;
+    --gray-color: #f2efea;
+}
+
+.btn-style{
+    background-color: var(--blue-color);
+    color: white;
+    margin-top: 20px;   
+}
+
+.btn-style:hover{
+    color: rgb(175, 175, 175);
+}
+
+.btn-second{
+    background-color: var(--primary-color);
+    color: white;
+    margin-top: 20px; 
+}
+
+.btn-second:hover{
+    color: rgb(175, 175, 175);
+}
+
+.bg_color_primary{
+    background-color: var(--primary-color);
+}
+
+.bg_color_blue{
+    background-color: var(--blue-color);
+}
+
+.btn-outline-blue{
+    border: 1px solid var(--blue-color);
+}
+
+.btn-outline-blue:hover{
+    background-color: var(--blue-color);
+}
+
+.btn-outline-blue:hover > svg{
+    fill: white;
+}
+
+main{
+    margin-top: 40px;
+}
+
+/* ==INDEX== */
+
+/* Menu de navegação */
+
+nav img{
+    width: 280px;
+    height: 80px;
+}
+
+nav ul li{
+    margin-right: 12px;
+}
+
+.nav-link{
+    font-size: 1.2rem;
+}
+
+/* ######### */
+
+/* Section Main */
+
+main.main_height{
+    height: calc(100% - 109px);
+    margin: 0;
+}
+
+main section{
+    background-color: var(--gray-color);
+    padding: 40px;
+    border-radius: 16px;
+}
+
+form label{
+    margin-bottom: 8px;
+}
+
+/* ######### */
+
+/* Modal */
+
+.modal-content{
+    padding: 10px 40px 40px 40px;
+}
+
+.modal-body > form > .btn-style{
+    margin-top: 40px;
+}
+
+/* ######### */
+
+/* ================== */
+
+/* ==LISTA VALIDADE== */
+
+/* Main */
+
+.lista_validade_main section{
+    padding: 0;
+    border-radius: 0;
+    background-color: transparent;
+}
+
+/* ######### */
+
+/* ================== */
+
+/* ==TABELA REBAIXA== */
+
+/* MAIN */
+
+.form-tabela-rebaixa{
+    background-color: var(--gray-color);
+    padding: 60px 80px 40px 80px;
+    border-radius: 16px;
+}
+
+.form-tabela-rebaixa > h2{
+    font-size: 1.4rem;
+}
+
+.form-tabela-rebaixa > form > div > button:hover svg{
+    fill: rgb(175, 175, 175);
+}
+
+/* ######### */
+
+/* ================== */
