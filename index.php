@@ -19,6 +19,14 @@ require_once 'assets/scripts/db_form.php';
 
 <main class="d-flex flex-column justify-content-center align-items-center main_height">
 
+    <?php if($feedback): ?>
+        <span class="alert alert-success" role="alert"><?= $feedback ?></span>
+    <?php endif ?>
+    
+    <?php if($feedbackAlterar): ?>
+        <span class="alert alert-primary" role="alert"><?= $feedbackAlterar ?></span>
+    <?php endif ?>
+
     <section class="container-md col-md-6">
         
         <form action="#" method="post" class="d-flex flex-column justify-content-center align-items-center">
