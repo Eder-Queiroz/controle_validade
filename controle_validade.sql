@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 02-Fev-2022 às 12:14
+-- Tempo de geração: 02-Fev-2022 às 17:48
 -- Versão do servidor: 10.4.22-MariaDB
 -- versão do PHP: 8.1.2
 
@@ -42,7 +42,7 @@ CREATE TABLE `adicionar` (
 --
 
 INSERT INTO `adicionar` (`codeBar`, `marca`, `nome`, `peso`, `setor`, `unidade`, `dataVenc`) VALUES
-(3228022930205, 'president', 'Queijo emmental president', 0.22, 'padaria', 18, '2022-02-27'),
+(3228022930205, 'president', 'Queijo emmental president', 0.22, 'padaria', 14, '2022-02-25'),
 (7622210194046, 'milka', 'Chocolate milka oreo', 0.1, 'mercearia', 8, '2022-03-26'),
 (7891000041178, 'Nestle', 'Iogurte integra morango bandeja', 0.54, 'padaria', 6, '2022-02-01'),
 (7891000241356, 'Nestle', 'Biscoito Passatempo recheado chocolate', 0.13, 'mercearia', 26, '2022-02-15'),
@@ -58,6 +58,24 @@ INSERT INTO `adicionar` (`codeBar`, `marca`, `nome`, `peso`, `setor`, `unidade`,
 (7898938236034, 'Coca-Cola', 'Coca-Cola garrafa PET', 2, 'mercearia', 12, '2022-03-04'),
 (7898953148039, 'prats', 'Suco laranja prats', 1, 'mercearia', 12, '2022-02-15');
 
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `usuarios`
+--
+
+CREATE TABLE `usuarios` (
+  `usuario` varchar(20) NOT NULL,
+  `senha` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `usuarios`
+--
+
+INSERT INTO `usuarios` (`usuario`, `senha`) VALUES
+('admin', 'admin');
+
 --
 -- Índices para tabelas despejadas
 --
@@ -67,6 +85,12 @@ INSERT INTO `adicionar` (`codeBar`, `marca`, `nome`, `peso`, `setor`, `unidade`,
 --
 ALTER TABLE `adicionar`
   ADD PRIMARY KEY (`codeBar`);
+
+--
+-- Índices para tabela `usuarios`
+--
+ALTER TABLE `usuarios`
+  ADD PRIMARY KEY (`usuario`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -2,6 +2,8 @@
 
 include_once 'validar_form_adicionar.php';
 
+// --inserindo produtos no banco de dados
+
 if(is_countable($erros) && !count($erros)) {
 
     $sql = "INSERT INTO adicionar

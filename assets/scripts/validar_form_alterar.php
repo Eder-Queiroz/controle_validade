@@ -1,5 +1,7 @@
 <?php 
 
+// --valida o formulario para alterar produtos.
+
 if(count($_POST) > 0) {
     
     $dados = $_POST;

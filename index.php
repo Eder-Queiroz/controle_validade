@@ -6,6 +6,8 @@ session_start();
 
 require_once 'assets/scripts/db_form.php';
 
+// --verifica se existe um usuario, se não redireciona ele para a página de login.
+
 if($_COOKIE['usuario']) {
     $_SESSION['usuario'] = $_COOKIE['usuario'];
 }

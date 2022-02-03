@@ -4,6 +4,7 @@ require_once 'conexao.php';
 
 $conexao = novaConexao();
 
+// -- formaração das datas.
 $tz = new DateTimeZone('America/Sao_Paulo');
 
 $data_atual = new DateTime(null, $tz);
@@ -13,6 +14,7 @@ $data_acrescentada = new DateTime(null, $tz);
 $data_acrescentada -> modify('+14 day');
 $data_acrescentada_formatada = $data_acrescentada -> format('Y-m-d');  
 
+// --faz a consulta das datas >= date +14 days e <= date.
 if(isset($_POST['submit_setor'])) {
 
     $filtrar = $conexao -> real_escape_string($_POST['setor']);
@@ -36,5 +38,7 @@ if(isset($_POST['submit_setor'])) {
     }
 
 }
+
+$conexao -> close();
 
 ?>

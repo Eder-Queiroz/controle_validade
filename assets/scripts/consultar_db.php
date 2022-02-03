@@ -12,6 +12,8 @@ if($_GET['excluir']) {
 
 }
 
+// --fazendo consulta no banco de dados.
+
 $sql = 'SELECT codeBar, marca, nome, peso, setor, unidade, dataVenc FROM adicionar';
 
 $resultado = $conexao -> query($sql);

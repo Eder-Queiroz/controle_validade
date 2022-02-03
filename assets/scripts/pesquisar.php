@@ -15,6 +15,8 @@ if($_GET['excluir']) {
 
 }
 
+// --realiza um consulta no banco de dados, por meio dos parametros especificados pelo usuario.
+
 if(isset($_POST['submit_pesquisar'])) {
 
     $pesquisar = $conexao -> real_escape_string($_POST['pesquisar']);
@@ -35,5 +37,7 @@ if(isset($_POST['submit_pesquisar'])) {
     }
 
 }
+
+$conexao -> close();
 
 ?>

@@ -2,8 +2,12 @@
 
 include_once 'validar_form_alterar.php';
 
+// --formatando data do input type=date para exibir no feedback.
+
 $formatandoData = new DateTime($_POST['data']);
 $dataFormatada = strftime('%d/%m/%Y', $formatandoData -> getTimestamp());
+
+// --alterando itens do banco de dados.
 
 if(is_countable($erros) && !count($erros)) {
 

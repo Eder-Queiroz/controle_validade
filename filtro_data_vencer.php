@@ -6,6 +6,14 @@ session_start();
 
 include_once 'assets/scripts/filtrar_data_vencer.php';
 
+if($_COOKIE['usuario']) {
+    $_SESSION['usuario'] = $_COOKIE['usuario'];
+}
+
+if(!$_SESSION['usuario']){
+    header('Location: login.php');
+}
+
 ?>
 
 <!DOCTYPE html>

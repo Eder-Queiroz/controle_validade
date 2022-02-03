@@ -15,6 +15,8 @@ if($_GET['excluir']) {
 
 }
 
+// --faz a consulta das datas até date +2 days.
+
 if(isset($_POST['submit_filtrar'])){
 
     $tz = new DateTimeZone('America/Sao_Paulo');
@@ -38,5 +40,7 @@ if(isset($_POST['submit_filtrar'])){
     }
 
 }
+
+$conexao -> close();
 
 ?>

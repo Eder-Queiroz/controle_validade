@@ -6,6 +6,14 @@ session_start();
 
 include_once 'assets/scripts/selec_tabela_rebaixa.php';
 
+if($_COOKIE['usuario']) {
+    $_SESSION['usuario'] = $_COOKIE['usuario'];
+}
+
+if(!$_SESSION['usuario']){
+    header('Location: login.php');
+}
+
 ?>
 
 <!DOCTYPE html>

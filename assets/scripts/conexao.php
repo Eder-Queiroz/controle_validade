@@ -1,5 +1,7 @@
 <?php
 
+    // função para fazer a conexão com o banco de dados.
+
     function novaConexao($banco = 'controle_validade') {
 
         $servidor = '127.0.0.1';
@@ -15,28 +17,5 @@
         return $conexao;
 
     }
-
-    // $sql = "CREATE TABLE IF NOT EXISTS adicionar (
-    //     id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    //     codeBar BIGINT NOT NULL,
-    //     marca VARCHAR(100) NOT NULL,
-    //     nome VARCHAR(100) NOT NULL,
-    //     peso FLOAT NOT NULL,
-    //     setor VARCHAR(100) NOT NULL,
-    //     unidade INT,
-    //     dataVenc DATE
-    // )";
     
-    // $conexao = novaConexao();
-    // $resultado = $conexao -> query($sql);
-    
-    // if($resultado) {
-    //     echo "Sucesso :)";
-    // }else {
-    //     echo "Erro: " . $conexao -> $error;
-    // }
-    
-    // $conexao -> close();
-    
-
 ?>

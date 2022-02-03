@@ -3,12 +3,15 @@
 ini_set('display_errors', 0);
 
 session_start();
+
+// --conexão com o banco de dados.
 require_once 'assets/scripts/db_form.php';
 $conexao = novaConexao();
 
 $usuario = $_POST['usuario'];
 $senha = $_POST['senha'];
 
+// --verificando e validando usuario e senha, também, criando sessão e cookie.
 if($_POST['usuario']) {
 
     $sql = "SELECT * FROM usuarios
@@ -47,6 +50,8 @@ if($_POST['usuario']) {
     }
 
 }
+
+$conexao -> close();
 
 ?>
 
