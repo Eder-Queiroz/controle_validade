@@ -1,7 +1,7 @@
 <h1 align="center">Controle de Validade 📅</h1>
 <h3 align="center">Um app para fazer o controle de validade dos produtos de supermercado.</h3> 
 
-![application](assets/images/base.png)
+![application](./assets/images/base.png
 
 </br>
 
