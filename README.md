@@ -11,7 +11,7 @@ poder consultar os produtos existentes e outras ferramentas que vão te auxiliar
 </br>
 
 ## 📶 Acesse o site
-<a href="https://ederqueiroz.000webhostapp.com/" target="_blank">https://ederqueiroz.000webhostapp.com/</a>
+https://ederqueiroz.000webhostapp.com/
 
 ## 📬 Licença
 Este software foi criado apenas para fins de estudo. Sinta-se à vontade para experimentá-lo.
