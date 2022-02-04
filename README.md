@@ -13,5 +13,8 @@ poder consultar os produtos existentes e outras ferramentas que vão te auxiliar
 ## 📶 Acesse o site
 https://ederqueiroz.000webhostapp.com/
 
+Usuário: admin
+Senha: admin
+
 ## 📬 Licença
 Este software foi criado apenas para fins de estudo. Sinta-se à vontade para experimentá-lo.
