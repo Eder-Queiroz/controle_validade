@@ -13,7 +13,7 @@ poder consultar os produtos existentes e outras ferramentas que vão te auxiliar
 ## 📶 Acesse o site
 https://ederqueiroz.000webhostapp.com/
 
-Usuário: admin
+Usuário: admin <br>
 Senha: admin
 
 ## 📬 Licença
